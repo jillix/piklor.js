@@ -21,8 +21,10 @@
         self.elm.addEventListener("click", function (ev) {
             var col = ev.target.getAttribute("data-col");
             if (!col) { return; }
-            console.log(col);
+            self.set(col);
+            self.close();
         });
+        self.close();
     }
 
     Piklor.prototype.getElm = function (el) {
