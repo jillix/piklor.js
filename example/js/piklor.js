@@ -1,24 +1,28 @@
 (function (root) {
 
     function Piklor(sel, colors, options) {
+        var self = this;
         options = options || {};
-        options.open = this.getElm(options.open);
+        options.open = self.getElm(options.open);
         options.openEvent = options.openEvent || "click";
         options.style = Object(options.style);
         options.style.display = options.style.display || "block";
         options.template = options.template || "<div data-col=\"{color}\" style=\"background-color: {color}\"></div>";
-        this.elm = this.getElm(sel);
-        this.cbs = [];
-        this.colors = colors;
-        this.options = options;
-        this.render();
+        self.elm = self.getElm(sel);
+        self.cbs = [];
+        self.colors = colors;
+        self.options = options;
+        self.render();
         if (options.open) {
             options.open.addEventListener(options.openEvent, function (ev) {
-                var col = ev.target.getAttribute("data-col");
-                if (!col) { return; }
-                console.log(col);
+                self.open();
             });
         }
+        self.elm.addEventListener("click", function (ev) {
+            var col = ev.target.getAttribute("data-col");
+            if (!col) { return; }
+            console.log(col);
+        });
     }
 
     Piklor.prototype.getElm = function (el) {
