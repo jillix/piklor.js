@@ -63,8 +63,14 @@ footer a:hover {
     height: 40px;
     margin: 5px;
     border-radius: 100%;
+    opacity: 0.7;
 }
 
 .picker-wrapper {
     padding: 20px;
 }
+
+.color-picker > div:hover {
+    opacity: 1;
+}
+
