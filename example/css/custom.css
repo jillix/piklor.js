@@ -13,6 +13,10 @@ header {
     background: #fff !important;
 }
 
+header, footer, .picker-wrapper {
+  transition: background-color 0.5s ease;
+}
+
 header, footer {
     color: white;
     background: #303F9F;
