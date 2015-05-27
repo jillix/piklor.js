@@ -49,13 +49,18 @@ footer a:hover {
     color: white;
 }
 
-line {
-    stroke-width: 2px;
+/* picker */
+.color-picker {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+    border: 1px solid rgba(203, 203, 203, 0.6);
+    border-radius: 2px;
 }
 
-.graph {
-    background: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 525px;
+.color-picker > div {
+    width: 40px;
+    display: inline-block;
+    height: 40px;
+    margin: 5px;
+    border-radius: 100%;
 }
