@@ -10,10 +10,14 @@ window.addEventListener("load", function () {
             open: ".picker-wrapper .btn"
           , position: "auto"
         })
-      , wrapperEl = document.querySelector(".picker-wrapper")
+      , wrapperEl = pk.getElm(".picker-wrapper")
+      , header = pk.getElm("header")
+      , footer = pk.getElm("footer")
       ;
 
     pk.colorChosen(function (col) {
         wrapperEl.style.backgroundColor = col;
+        header.style.backgroundColor = col;
+        footer.style.backgroundColor = col;
     });
 });
