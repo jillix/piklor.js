@@ -38,7 +38,7 @@
           ;
 
         self.colors.forEach(function (c) {
-            html = self.options.template.replace(/\{color\}/g, c);
+            html += self.options.template.replace(/\{color\}/g, c);
         });
 
         self.elm.innerHTML = html;
