@@ -16,6 +16,7 @@
      *    - `display` (String): The display value when the picker is opened (default: `"block"`).
      *  - `template` (String): The color item template. The `{color}` snippet will be replaced
      *    with the color value (default: `"<div data-col=\"{color}\" style=\"background-color: {color}\"></div>"`).
+     *  - `autoclose` (Boolean): If `false`, the color picker will not be hided by default (default: `true`).
      *
      * @return {Piklor} The `Piklor` instance.
      */
@@ -48,7 +49,9 @@
             self.close();
         });
 
-        self.close();
+        if (options.autoclose !== false) {
+            self.close();
+        }
     }
 
     /**
