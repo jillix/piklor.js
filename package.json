@@ -1,0 +1,26 @@
+{
+  "name": "piklor.js",
+  "version": "1.0.0",
+  "description": "A tiny JavaScript color picker library.",
+  "main": "src/piklor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "contributors": [
+    "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jillix/piklor.js.git"
+  },
+  "keywords": [
+    "color",
+    "picker"
+  ],
+  "author": "jillix <contact@jillix.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jillix/piklor.js/issues"
+  },
+  "homepage": "https://github.com/jillix/piklor.js"
+}
