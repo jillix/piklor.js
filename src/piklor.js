@@ -49,6 +49,12 @@
             self.set(col);
             self.close();
         });
+        
+        window.addEventListener("click", function (ev) {
+            if (ev.target != options.open && self.isOpen) {
+              self.close();
+            }
+        });
 
         if (options.autoclose !== false) {
             self.close();
