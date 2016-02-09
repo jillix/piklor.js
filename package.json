@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/jillix/piklor.js/issues"
   },
-  "homepage": "https://github.com/jillix/piklor.js"
+  "homepage": "https://github.com/jillix/piklor.js",
+  "devDependencies": {
+    "uglifyjs": "^2.4.10"
+  }
 }
