@@ -1,6 +1,6 @@
 {
   "name": "piklor.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A tiny JavaScript color picker library.",
   "main": "src/piklor.js",
   "scripts": {
