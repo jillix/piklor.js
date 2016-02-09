@@ -30,6 +30,7 @@
         options.template = options.template || "<div data-col=\"{color}\" style=\"background-color: {color}\"></div>";
         self.elm = self.getElm(sel);
         self.cbs = [];
+        self.isOpen = true;
         self.colors = colors;
         self.options = options;
         self.render();
@@ -37,7 +38,7 @@
         // Handle the open element and event.
         if (options.open) {
             options.open.addEventListener(options.openEvent, function (ev) {
-                self.open();
+                self.isOpen ? self.close() : self.open();
             });
         }
 
@@ -98,6 +99,7 @@
      */
     Piklor.prototype.close = function () {
         this.elm.style.display = "none";
+        this.isOpen = false;
     };
 
     /**
@@ -109,6 +111,7 @@
      */
     Piklor.prototype.open = function () {
         this.elm.style.display = this.options.style.display;
+        this.isOpen = true;
     };
 
     /**
