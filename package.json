@@ -10,7 +10,8 @@
     "deploy": "cp -r example ../_tmp && git checkout gh-pages && cp -r ../_tmp/* . && git add . -A && git commit -m 'Rebuild.' && rm -rf ../_tmp ../_tmp.js"
   },
   "contributors": [
-    "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)"
+    "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+    "Kosta Korenkov <7r0ggy@gmail.com>"
   ],
   "repository": {
     "type": "git",
