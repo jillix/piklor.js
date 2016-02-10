@@ -17,6 +17,7 @@
      *  - `template` (String): The color item template. The `{color}` snippet will be replaced
      *    with the color value (default: `"<div data-col=\"{color}\" style=\"background-color: {color}\"></div>"`).
      *  - `autoclose` (Boolean): If `false`, the color picker will not be hided by default (default: `true`).
+     *  - `closeOnBlur` (Boolean): If `true`, the color picker will be closed when clicked outside of it (default: `false`).
      *
      * @return {Piklor} The `Piklor` instance.
      */
@@ -53,6 +54,7 @@
         
         if (options.closeOnBlur) {
           window.addEventListener("click", function (ev) {
+              // check if we didn't click 'open' and 'color pallete' elements
               if (ev.target != options.open && ev.target != self.elm && self.isOpen) {
                 self.close();
               }
