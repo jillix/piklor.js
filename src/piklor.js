@@ -53,7 +53,7 @@
         
         if (options.closeOnBlur) {
           window.addEventListener("click", function (ev) {
-              if (ev.target != options.open && self.isOpen) {
+              if (ev.target != options.open && ev.target != self.elm && self.isOpen) {
                 self.close();
               }
           });
