@@ -27,6 +27,7 @@
         options.openEvent = options.openEvent || "click";
         options.style = Object(options.style);
         options.style.display = options.style.display || "block";
+        options.closeOnBlur = options.closeOnBlur || false;
         options.template = options.template || "<div data-col=\"{color}\" style=\"background-color: {color}\"></div>";
         self.elm = self.getElm(sel);
         self.cbs = [];
@@ -50,11 +51,13 @@
             self.close();
         });
         
-        window.addEventListener("click", function (ev) {
-            if (ev.target != options.open && self.isOpen) {
-              self.close();
-            }
-        });
+        if (options.closeOnBlur) {
+          window.addEventListener("click", function (ev) {
+              if (ev.target != options.open && self.isOpen) {
+                self.close();
+              }
+          });
+        }
 
         if (options.autoclose !== false) {
             self.close();
