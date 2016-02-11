@@ -5,7 +5,7 @@
   "main": "src/piklor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "min": "uglifyjs src/piklor.js > src/piklor.min.js",
+    "min": "uglifyjs src/piklor.js -c -m > src/piklor.min.js",
     "update-min": "cp src/piklor.min.js example/js/piklor.js && git add example && git commit -m 'Updated piklor.js in the example dir' .",
     "deploy": "cp -r example ../_tmp && git checkout gh-pages && cp -r ../_tmp/* . && git add . -A && git commit -m 'Rebuild.' && rm -rf ../_tmp ../_tmp.js"
   },
