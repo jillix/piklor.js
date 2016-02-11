@@ -21,7 +21,8 @@ window.addEventListener("load", function () {
           , "#bdc3c7"
           , "#7f8c8d"
         ], {
-            open: ".picker-wrapper .btn"
+            open: ".picker-wrapper .btn",
+            closeOnBlur: true
         })
       , wrapperEl = pk.getElm(".picker-wrapper")
       , header = pk.getElm("header")
