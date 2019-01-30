@@ -53,12 +53,12 @@
         });
         
         if (options.closeOnBlur) {
-          window.addEventListener("click", function (ev) {
-              // check if we didn't click 'open' and 'color pallete' elements
-              if (ev.target != options.open && ev.target != self.elm && self.isOpen) {
-                self.close();
-              }
-          });
+            window.addEventListener("click", function (ev) {
+                // check if we didn't click 'open' and 'color pallete' elements
+                if (ev.target != options.open && ev.target != self.elm && self.isOpen) {
+                    self.close();
+                }
+            });
         }
 
         if (options.autoclose !== false) {
